@@ -66,4 +66,7 @@ describe("findNamespaceValue", function () {
         ns = findNamespaceValue('test.names.3', obj);
         assert.equal(ns, undefined)
     });
+    it('should not observe object instance properties of arrays', function () {
+        assert.equal(findNamespaceValue('length', [], 'myFallback'), 'myFallback');
+    });
 });
