@@ -1,6 +1,6 @@
 {
   "name": "find-namespace-value",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Find and return a value in an object namespace",
   "main": "lib/index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "license": "MIT",
   "devDependencies": {
     "mocha": "^2.2.5"
+  },
+  "dependencies": {
+    "lodash.isarray": "^3.0.4"
   }
 }

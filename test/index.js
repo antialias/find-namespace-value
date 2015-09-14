@@ -53,4 +53,17 @@ describe("findNamespaceValue", function () {
         var ns = findNamespaceValue('test.lastName', tester);
         assert.equal(ns, undefined);
     });
+    it('should return the value from an array', function () {
+        var obj = {
+            test: {
+                names: ['seymour', 'moe', 'ralph']
+            }
+        };
+        var ns = findNamespaceValue('test.names.0', obj);
+        assert.equal(ns, 'seymour');
+        ns = findNamespaceValue('test.names.2', obj);
+        assert.equal(ns, 'ralph');
+        ns = findNamespaceValue('test.names.3', obj);
+        assert.equal(ns, undefined)
+    });
 });
